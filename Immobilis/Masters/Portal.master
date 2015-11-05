@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Portal.master.cs" Inherits="Masters_Portal" %>
+
+<%@ Register Src="~/Wuc/HomeLogin.ascx" TagPrefix="WucHomeLogin" TagName="HomeLogin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <title>Inmobiliaria</title>
+    <meta name="description" content="BlackTie.co - Free Handsome Bootstrap Themes" />
+    <meta name="keywords" content="themes, bootstrap, free, templates, bootstrap 3, freebie," />
+    <meta property="og:title" content="" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../fancybox/jquery.fancybox-v=2.1.5.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+
+    <link rel="prefetch" href="../images/zoom.png" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div class="navbar navbar-fixed-top" data-activeslide="1">
+            <div class="container">
+                <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav row">
+                        <li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span><span class="text">INICIO</span></a></li>
+                        <li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-user"></span><span class="text">PROPIEDADES</span></a></li>
+                        <li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span><span class="text">CLIENTES</span></a></li>
+                        <li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-gears"></span><span class="text">¿QUIENES SOMOS?</span></a></li>
+                        <li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-heart"></span><span class="text">CONTÁCTANOS</span></a></li>
+                        <asp:Panel ID="panelMenuLogin" runat="server">
+                            <li style="align: right" data-slide="1" class="col-12 col-sm-2">
+                                <a data-toggle="modal" href="#myModal" title="Next Section">
+                                    <span class="icon icon-user"></span><span class="text">&nbsp&nbsp;
+                                        Entrar
+                                    </span>
+                                </a>
+                            </li>
+                        </asp:Panel>
+                        <asp:Panel ID="panelSessionActiva" runat="server">
+                            <li class="col-12 col-sm-2">
+                                <asp:LinkButton ID="lbLinkMenuUsuarioPerfil" runat="server" OnClick="lbLinkMenuUsuarioPerfil_Click">
+                                    <span class="icon icon-user"></span><span class="text">&nbsp&nbsp;
+                                       <asp:Literal ID="litNombreUsuario" runat="server"></asp:Literal>
+                                    </span>
+                                </asp:LinkButton>
+                            </li>
+                            <li class="col-12 col-sm-2">
+                                <a href="../PortalUsuario/UsuarioInicio.aspx">
+                                    <span class="icon icon-off"></span>
+                                    <span class="text">
+                                        <%# String.IsNullOrEmpty(Session["PersonaId"].ToString()) ? Session["NombreUsuario"].ToString() :"Entrar" %>
+                                    </span>
+                                </a>
+                            </li>
+                        </asp:Panel>
+                    </ul>
+                    <div class="row">
+                        <div class="col-sm-2 active-menu"></div>
+                    </div>
+                </div>
+                <!-- /.nav-collapse -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.navbar -->
+        <!--modales-->
+        <WucHomeLogin:HomeLogin runat="server" ID="HomeLogin" />
+        <!--fin modales-->
+        <!-- === Arrows === -->
+        <div id="arrows">
+            <div id="arrow-up" class="disabled"></div>
+            <div id="arrow-down"></div>
+            <div id="arrow-left" class="disabled visible-lg"></div>
+            <div id="arrow-right" class="disabled visible-lg"></div>
+                                <a href="../PortalUsuario/UsuarioInicio.aspx">Link</a>
+        </div>
+        <!-- /.arrows -->
+
+        <asp:ContentPlaceHolder ID="Home" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+<!-- SCRIPTS -->
+<script src="../js/html5shiv.js"></script>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
+<script src="../js/script.js"></script>
+<!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
+<script src="../js/jquery.mockjax.js"></script>
+<script src="../js/bootstrap-typeahead.js"></script>
+
+<!-- fancybox init -->
+<script>
+    $(document).ready(function (e) {
+        var lis = $('.nav > li');
+        menu_focus(lis[0], 1);
+
+        $(".fancybox").fancybox({
+            padding: 4,
+            helpers: {
+                overlay: {
+                    locked: false
+                }
+            }
+        });
+
+    });
+</script>
+</html>

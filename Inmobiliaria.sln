@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inmobiliaria.Tests", "Inmobiliaria.Tests\Inmobiliaria.Tests.csproj", "{BCB99B90-0B3B-4C5F-BE51-78188280AE36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inmobiliaria.Dto", "Inmobiliaria.Dto\Inmobiliaria.Dto.csproj", "{F4B33F63-E3B1-4AE9-A213-E62F4FB79B69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inmobiliaria.GestorDB", "Inmobiliaria.GestorDB\Inmobiliaria.GestorDB.csproj", "{06600C3B-ECF0-47AD-B0A7-625EECA732E2}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Immobilis", "Immobilis\", "{42849070-64AF-4B5B-9556-5AA4EB91C4F0}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{f4b33f63-e3b1-4ae9-a213-e62f4fb79b69}|Inmobiliaria.Dto.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_27043"
+		Debug.AspNetCompiler.PhysicalPath = "Immobilis\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_27043\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_27043"
+		Release.AspNetCompiler.PhysicalPath = "Immobilis\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_27043\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "27043"
+		SlnRelativePath = "Immobilis\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCB99B90-0B3B-4C5F-BE51-78188280AE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB99B90-0B3B-4C5F-BE51-78188280AE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB99B90-0B3B-4C5F-BE51-78188280AE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB99B90-0B3B-4C5F-BE51-78188280AE36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B33F63-E3B1-4AE9-A213-E62F4FB79B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B33F63-E3B1-4AE9-A213-E62F4FB79B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B33F63-E3B1-4AE9-A213-E62F4FB79B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B33F63-E3B1-4AE9-A213-E62F4FB79B69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06600C3B-ECF0-47AD-B0A7-625EECA732E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06600C3B-ECF0-47AD-B0A7-625EECA732E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06600C3B-ECF0-47AD-B0A7-625EECA732E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06600C3B-ECF0-47AD-B0A7-625EECA732E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42849070-64AF-4B5B-9556-5AA4EB91C4F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42849070-64AF-4B5B-9556-5AA4EB91C4F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42849070-64AF-4B5B-9556-5AA4EB91C4F0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{42849070-64AF-4B5B-9556-5AA4EB91C4F0}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
